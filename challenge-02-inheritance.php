@@ -24,4 +24,10 @@ class TypesOfSoftWood extends TypesOfWood {
   var $fir = false;
 }
 
+// Define a class for types of oak
+class TypesOfOak extends TypesOfHardWood {
+  var $white = false;
+  var $red = false;
+}
+
 ?>
