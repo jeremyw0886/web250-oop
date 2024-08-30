@@ -112,6 +112,10 @@ echo "Wood working is my favorite hobby and these are the types of wood I use in
 echo "Hardwoods: <br>";
 echo ($oak->red ? 'Red Oak' : '') . ", " . ($oak->white ? 'White Oak' : '') . ", " . ($hardwood->maple ? 'Maple' : '') . ", " . ($hardwood->cherry ? 'Cherry' : '') . ", " . ($hardwood->walnut ? 'Walnut' : '') . ", and " . ($hardwood->mahogany ? 'Mahogany' : '') . "<br><br>";
 
+// Print the types of softwoods used in the wood shop
+echo "Softwoods: <br>";
+echo ($pine->white ? 'White Pine' : '') . ", " . ($pine->yellow ? 'Yellow Pine' : '') . ", " . ($softwood->cedar ? 'Cedar' : '') . ", " . ($softwood->redwood ? 'Redwood' : '') . ", " . ($softwood->spruce ? 'Spruce' : '') . ", and " . ($softwood->fir ? 'Fir' : '') . "<br><br>";
+
 
 
 ?>
