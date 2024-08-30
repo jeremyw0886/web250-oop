@@ -7,12 +7,21 @@ class TypesOfWood {
 }
 
 // Define a class for hardwood
-class TypesOfHardwood extends TypesOfWood {
+class TypesOfHardWood extends TypesOfWood {
   var $oak = false;
   var $maple = false;
   var $cherry = false;
   var $walnut = false;
   var $mahogany = false; 
+}
+
+// Define a class for softwood
+class TypesOfSoftWood extends TypesOfWood {
+  var $pine = false;
+  var $cedar = false;
+  var $redwood = false;
+  var $spruce = false;
+  var $fir = false;
 }
 
 ?>
