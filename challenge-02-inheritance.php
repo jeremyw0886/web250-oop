@@ -100,4 +100,9 @@ $oak = new TypesOfOak();
 $oak -> white = true;
 $oak -> red = true;
 
+// Create an instance of TypesOfPine and set its properties
+$pine = new TypesOfPine();
+$pine -> white = true;
+$pine -> yellow = true;
+
 ?>
