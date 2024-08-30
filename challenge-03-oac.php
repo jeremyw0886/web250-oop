@@ -6,7 +6,7 @@ class Bicycle {
   public $model;
   public $year;
   public $description = 'Used bicycle';
-  public $weight_kg = 0.0;
+  private $weight_kg = 0.0;
   protected $wheels = 2;
 
   public function name() {
