@@ -69,4 +69,7 @@ function inspect_class($class_name) {
   return $output;
 }
 
+// List of Class Names to inspect
+$class_names = ['TypesOfWood', 'TypesOfHardWood', 'TypesOfSoftWood', 'TypesOfOak', 'TypesOfPine'];
+
 ?>
