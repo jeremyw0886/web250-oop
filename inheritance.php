@@ -2,11 +2,11 @@
 
 class User {
 
-  var $isAdmin = false;
+  public $isAdmin = false;
 
-  var $firstName;
-  var $lastName;
-  var $username;
+  public $firstName;
+  public $lastName;
+  public $username;
 
   function fullName() {
     return $this->firstName . " " . $this->lastName;
@@ -16,9 +16,9 @@ class User {
 
 class Customer extends User {
 
-  var $city;
-  var $state; // or province
-  var $country;
+  public $city;
+  public $state; // or province
+  public $country;
 
   function location() {
     return $this->city . ", " . $this->state . ", " . $this->country;
@@ -26,7 +26,7 @@ class Customer extends User {
 }
 
 class AdminUser extends User {
-  var $isAdmin = true;
+  public $isAdmin = true;
 
   function fullName() {
     return $this->firstName . " " . $this->lastName . " (Admin)";
