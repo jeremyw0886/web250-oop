@@ -72,4 +72,11 @@ function inspect_class($class_name) {
 // List of Class Names to inspect
 $class_names = ['TypesOfWood', 'TypesOfHardWood', 'TypesOfSoftWood', 'TypesOfOak', 'TypesOfPine'];
 
+// Loop through each class name, inspect it, and print the result
+foreach ($class_names as $class_name) {
+  echo nl2br(inspect_class($class_name));
+  echo '<br>';
+}
+echo '<br>';
+
 ?>
