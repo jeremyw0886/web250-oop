@@ -41,4 +41,12 @@ class Unicycle extends Bicycle {
   protected $wheels = 1;
 }
 
+// Create instances of Bicycle and Unicycle
+$trek = new Bicycle;
+$trek->brand = 'Trek';
+$trek->model = 'Emonda';
+$trek->year = '2017';
+
+$uni = new Unicycle;
+
 ?>
