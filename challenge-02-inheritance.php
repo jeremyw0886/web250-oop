@@ -95,4 +95,9 @@ $softwood -> redwood = true;
 $softwood -> spruce = true;
 $softwood -> fir = true;
 
+// Create an instance of TypesOfOak and set its properties
+$oak = new TypesOfOak();
+$oak -> white = true;
+$oak -> red = true;
+
 ?>
