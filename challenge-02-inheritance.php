@@ -79,4 +79,12 @@ foreach ($class_names as $class_name) {
 }
 echo '<br>';
 
+// Create an instance of TypesOfHardWood and set its properties
+$hardwood = new TypesOfHardWood();
+$hardwood -> oak = true;
+$hardwood -> maple = true;
+$hardwood -> cherry = true;
+$hardwood -> walnut = true;
+$hardwood -> mahogany = true;
+
 ?>
