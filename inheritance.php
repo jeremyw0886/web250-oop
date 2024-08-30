@@ -5,8 +5,8 @@ class User {
   public $isAdmin = false;
 
   public $firstName;
-  public $lastName;
-  public $username;
+  private $lastName;
+  private $username;
 
   function fullName() {
     return $this->firstName . " " . $this->lastName;
