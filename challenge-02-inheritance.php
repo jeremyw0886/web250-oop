@@ -108,6 +108,10 @@ $pine -> yellow = true;
 // Print a message about the types of wood used in the wood shop
 echo "Wood working is my favorite hobby and these are the types of wood I use in my wood shop.<br><br>";
 
+// Print the types of hardwoods used in the wood shop
+echo "Hardwoods: <br>";
+echo ($oak->red ? 'Red Oak' : '') . ", " . ($oak->white ? 'White Oak' : '') . ", " . ($hardwood->maple ? 'Maple' : '') . ", " . ($hardwood->cherry ? 'Cherry' : '') . ", " . ($hardwood->walnut ? 'Walnut' : '') . ", and " . ($hardwood->mahogany ? 'Mahogany' : '') . "<br><br>";
+
 
 
 ?>
