@@ -49,4 +49,24 @@ $trek->year = '2017';
 
 $uni = new Unicycle;
 
+// Display the details of the Bicycle and Unicycle
+echo "Bicycle: " . $trek->wheelDetails() . "<br>";
+echo "Unicycle: " . $uni->wheelDetails() . "<br>";
+echo "<hr>";
+
+// Set weight using kg and display the weight
+echo "Set weight using kg: <br>";
+$trek->setWeightKg(1);
+echo $trek->getWeightKg() . "<br>";
+echo $trek->weightLbs() . "<br>";
+echo "<hr>";
+
+// Set weight using lbs and display the weight
+echo "Set weight using lbs: <br>";
+$trek->setWeightLbs(2.);
+echo $trek->getWeightKg() . "<br>";
+echo $trek->weightLbs() . "<br>";
+echo "<hr>";
+
+echo "The bug in weightKg is that it is now private and can't be accessed from outside the class. To fix this, we can change it to protected.";
 ?>
