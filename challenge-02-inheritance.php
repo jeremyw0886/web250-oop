@@ -87,4 +87,12 @@ $hardwood -> cherry = true;
 $hardwood -> walnut = true;
 $hardwood -> mahogany = true;
 
+// Create an instance of TypesOfSoftWood and set its properties
+$softwood = new TypesOfSoftWood();
+$softwood -> pine = true;
+$softwood -> cedar = true;
+$softwood -> redwood = true;
+$softwood -> spruce = true;
+$softwood -> fir = true;
+
 ?>
