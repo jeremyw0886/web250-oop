@@ -22,6 +22,11 @@ class Bicycle {
 
 }
 
+// Create a Unicycle subclass
+class Unicycle extends Bicycle {
+  
+}
+
 $trek = new Bicycle;
 $trek->brand = 'Trek';
 $trek->model = 'Emonda';
