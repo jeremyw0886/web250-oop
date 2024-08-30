@@ -7,6 +7,7 @@ class Bicycle {
   public $year;
   public $description = 'Used bicycle';
   public $weight_kg = 0.0;
+  protected $wheels = 2;
 
   public function name() {
     return $this->brand . " " . $this->model . " (" . $this->year . ")";
@@ -24,7 +25,7 @@ class Bicycle {
 
 // Create a Unicycle subclass
 class Unicycle extends Bicycle {
-  
+  protected $wheels = 1;
 }
 
 $trek = new Bicycle;
