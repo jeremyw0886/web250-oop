@@ -30,4 +30,10 @@ class TypesOfOak extends TypesOfHardWood {
   var $red = false;
 }
 
+// Define a class for types of pine
+class TypesOfPine extends TypesOfSoftWood {
+  var $white = false;
+  var $yellow = false;
+}
+
 ?>
