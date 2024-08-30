@@ -18,6 +18,10 @@ class Bicycle {
     return "It has " . $wheel_string . ".";
   }
 
+  public function setWeightKg($value) {
+    $this->weight_kg = floatval($value);
+  }
+
   public function weight_lbs() {
     return floatval($this->weight_kg) * 2.2046226218;
   }
