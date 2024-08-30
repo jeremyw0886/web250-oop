@@ -2,13 +2,41 @@
 
 class User {
 
-  public $isAdmin = false;
+  private $isAdmin = false;
 
   protected $firstName;
   protected $lastName;
   public $username;
 
-  function fullName() {
+  public function getIsAdmin() {
+    return $this->isAdmin;
+  }
+
+  public function setIsAdmin($isAdmin) {
+    $this->isAdmin = $isAdmin;
+  }
+
+  public function getFirstName() {
+    return $this->firstName;
+  }
+
+  public function setFirstName($firstName) {
+    if (!empty($firstName)) {
+      $this->firstName = $firstName;
+    }
+  }
+
+  public function getLastName() {
+    return $this->lastName;
+  }
+
+  public function setLastName($lastName) {
+    if (!empty($lastName)) {
+      $this->lastName = $lastName;
+    }
+  }
+
+  public function fullName() {
     return $this->firstName . " " . $this->lastName;
   }
 
@@ -20,27 +48,29 @@ class Customer extends User {
   public $state; // or province
   public $country;
 
-  function location() {
+  public function location() {
     return $this->city . ", " . $this->state . ", " . $this->country;
   }
 }
 
 class AdminUser extends User {
-  public $isAdmin = true;
+  public function __construct() {
+    $this->setIsAdmin(true);
+  }
 
-  function fullName() {
-    return $this->firstName . " " . $this->lastName . " (Admin)";
+  public function fullName() {
+    return $this->getFirstName() . " " . $this->getLastName() . " (Admin)";
   }
 }
 
 $u = new User;
-$u->firstName = 'Jerry';
-$u->lastName = 'Seinfeld';
+$u->setFirstName('Jerry');
+$u->setLastName('Seinfeld');
 $u->username = 'jseinfeld';
 
 $c = new Customer;
-$c->firstName = 'George';
-$c->lastName = 'Costanza';
+$c->setFirstName('George');
+$c->setLastName('Costanza');
 $c->username = 'gcostanza';
 $c->city = 'New York';
 $c->state = 'New York';
