@@ -105,4 +105,9 @@ $pine = new TypesOfPine();
 $pine -> white = true;
 $pine -> yellow = true;
 
+// Print a message about the types of wood used in the wood shop
+echo "Wood working is my favorite hobby and these are the types of wood I use in my wood shop.<br><br>";
+
+
+
 ?>
