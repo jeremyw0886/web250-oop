@@ -116,6 +116,4 @@ echo ($oak->red ? 'Red Oak' : '') . ", " . ($oak->white ? 'White Oak' : '') . ",
 echo "Softwoods: <br>";
 echo ($pine->white ? 'White Pine' : '') . ", " . ($pine->yellow ? 'Yellow Pine' : '') . ", " . ($softwood->cedar ? 'Cedar' : '') . ", " . ($softwood->redwood ? 'Redwood' : '') . ", " . ($softwood->spruce ? 'Spruce' : '') . ", and " . ($softwood->fir ? 'Fir' : '') . "<br><br>";
 
-
-
 ?>
