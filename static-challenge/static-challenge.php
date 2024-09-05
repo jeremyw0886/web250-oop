@@ -79,3 +79,9 @@ class Unicycle extends Bicycle {
     }
   }
 }
+
+// Create instances of Bicycle
+$trek = new Bicycle;
+$trek->brand = 'Trek';
+$trek->model = 'Emonda';
+$trek->year - '2017';
