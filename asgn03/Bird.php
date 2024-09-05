@@ -8,13 +8,13 @@ class Bird {
     var $song = "chirp";
     var $flying = "yes";
 
-    function can_fly() {
+    function canFly() {
         if ( $this->flying == "yes" ) {
-            $flying_string = "can fly";
+            $flyingString = "can fly";
         } else {
-            $flying_string = "is stuck on the ground";
+            $flyingString = "is stuck on the ground";
         }
-        return  $flying_string ;
+        return  $flyingString ;
     }
 }
 
