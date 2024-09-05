@@ -11,6 +11,14 @@ class Bicycle {
   public $description = 'Used bicycle';
   protected $weightKg = 0.0; // change visibility to protected
   protected $wheels = 2;
+  
+  // add a static method to create a new instance
+  public static function create() {
+    $className = get_called_class();
+    $obj = new $className;
+    self::$instanceCount++;
+    return $obj;
+  }
 
   public function name() {
     return $this->brand . " " . $this->model . " (" . $this->year . ")";
