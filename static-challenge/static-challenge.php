@@ -2,11 +2,14 @@
 
 class Bicycle {
 
+  // static property to keep track of the number of instances
+  public static $instanceCount = 0;
+
   public $brand;
   public $model;
   public $year;
   public $description = 'Used bicycle';
-  private $weightKg = 0.0;
+  protected $weightKg = 0.0; // change visibility to protected
   protected $wheels = 2;
 
   public function name() {
