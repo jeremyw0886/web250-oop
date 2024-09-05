@@ -22,6 +22,10 @@ class Bird {
     //     return  $flyingString ;
     // }
 
+    public function __construct() {
+        self::$instanceCount++;
+    } // Increment the instanceCount property by one each time a new instance of the class is created
+
     public function canFly() {
         return $this->flying == "yes" ? "bird can fly" : "cannot fly and is stuck on the ground"; // ternary operator
     }

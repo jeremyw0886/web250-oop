@@ -11,16 +11,10 @@
 <?php 
     include 'Bird.php';
     
-    $bird = new Bird;
-    echo '<p>The generic song of any bird is "' . $bird->song . '".</p>';
-
-    $flyCatcher = new YellowBelliedFlyCatcher;
-    echo '<p>The song of the ' . $flyCatcher->name . ' on breeding grounds is "' . $flyCatcher->song . '".</p>';
-
-    $kiwi = new Kiwi;
-    $kiwi->flying = "no";
-    echo "<p>The " . $flyCatcher->name . " " . $flyCatcher->canFly() . ".</p>";
-    echo "<p>The " . $kiwi->name . " " . $kiwi->canFly() . ".</p>";    
+    // Display instance counts before using create() method
+    echo "<p>Bird instances: " . Bird::$instanceCount . "</p>";
+    echo "<p>Yellow-bellied Flycatcher instances: " . YellowBelliedFlyCatcher::$instanceCount . "</p>";
+    echo "<p>Kiwi instances: " . Kiwi::$instanceCount . "</p>";    
 
 ?>
     </body>
