@@ -10,7 +10,7 @@ class Bicycle {
   public $year;
   public $description = 'Used bicycle';
   protected $weightKg = 0.0; // change visibility to protected
-  protected $wheels = 2;
+  protected static $wheels = 2; // change visibility to static
   
   // add a constant property for categories
   public const CATEGORIES = ['Road', 'Mountain', 'Hybrid', 'Cruiser', 'City', 'BMX'];
@@ -35,9 +35,10 @@ class Bicycle {
   public function name() {
     return $this->brand . " " . $this->model . " (" . $this->year . ")";
   }
-
+  
+  // make wheelDetails() a static method
   public function wheelDetails() {
-    $wheelString = $this->wheels == 1 ? "1 wheel" : "{$this->wheels} wheels";
+    $wheelString = static::$wheels == 1 ? "1 wheel" : static::$wheels . " wheels";
     return "It has " . $wheelString . ".";
   }
 
@@ -61,5 +62,5 @@ class Bicycle {
 
 // Create a Unicycle subclass
 class Unicycle extends Bicycle {
-  protected $wheels = 1;
+  protected static $wheels = 1; // change visibility to static
 }
