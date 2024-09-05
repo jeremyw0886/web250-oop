@@ -29,6 +29,10 @@ class Bird {
     public function canFly() {
         return $this->flying == "yes" ? "bird can fly" : "cannot fly and is stuck on the ground"; // ternary operator
     }
+
+    public static function create() {
+        return new static();
+    }
 }
 
 class YellowBelliedFlyCatcher extends Bird {
