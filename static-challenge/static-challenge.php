@@ -14,6 +14,7 @@ class Bicycle {
   
   // add a constant property for categories
   public const CATEGORIES = ['Road', 'Mountain', 'Hybrid', 'Cruiser', 'City', 'BMX'];
+
   // add a static method to get the categories
   public function __construct() {
     self::$instanceCount++;
@@ -37,7 +38,7 @@ class Bicycle {
   }
   
   // make wheelDetails() a static method
-  public function wheelDetails() {
+  public static function wheelDetails() {
     $wheelString = static::$wheels == 1 ? "1 wheel" : static::$wheels . " wheels";
     return "It has " . $wheelString . ".";
   }
@@ -63,4 +64,18 @@ class Bicycle {
 // Create a Unicycle subclass
 class Unicycle extends Bicycle {
   protected static $wheels = 1; // change visibility to static
+  
+  // creates a method that extends the parent method and adds to it 
+  public function name() {
+    return "Unicycle: " . parent::name();
+  }
+  
+  //creates a method which overrides the parent method but also falls back to the parent method if the condition is not met
+  public static function wheelDetails() {
+    if (static::$wheels == 1) {
+      return "It has 1 wheel.";
+    } else {
+      return parent::wheelDetails();
+    }
+  }
 }
