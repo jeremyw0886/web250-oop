@@ -23,11 +23,14 @@ class Bird {
     // }
 
     public function canFly() {
-        return $this->flying == 'yes' ? 'bird can fly' : 'cannot fly and is stuck on the ground'; // ternary operator
+        return $this->flying == "yes" ? "bird can fly" : "cannot fly and is stuck on the ground"; // ternary operator
     }
 }
 
 class YellowBelliedFlyCatcher extends Bird {
+
+    public static $eggNum = "3-4, sometimes 5"; // A static property to keep track of the number of eggs laid by all birds
+
     public $name = "yellow-bellied flycatcher";
     public $diet = "mostly insects.";
     public $song = "flat chilk";
