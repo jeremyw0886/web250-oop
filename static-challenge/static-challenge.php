@@ -19,6 +19,11 @@ class Bicycle {
     self::$instanceCount++;
     return $obj;
   }
+  
+  // add a static method to get the instance count
+  public static function getInstanceCount() {
+    return self::$instanceCount;
+  }
 
   public function name() {
     return $this->brand . " " . $this->model . " (" . $this->year . ")";
