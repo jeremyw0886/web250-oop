@@ -12,6 +12,13 @@ class Bicycle {
   protected $weightKg = 0.0; // change visibility to protected
   protected $wheels = 2;
   
+  // add a constant property for categories
+  public const CATEGORIES = ['Road', 'Mountain', 'Hybrid', 'Cruiser', 'City', 'BMX'];
+  // add a static method to get the categories
+  public function __construct() {
+    self::$instanceCount++;
+  }
+  
   // add a static method to create a new instance
   public static function create() {
     $className = get_called_class();
