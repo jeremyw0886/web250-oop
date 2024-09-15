@@ -4,21 +4,23 @@ class Bird {
   public $commonName;
   public $latinName;
 
-  public function __construct($commonName, $latinName) {
-    $this->commonName = $commonName;
-    $this->latinName = $latinName;
+  public function __construct($args) {
+    $this->commonName = $args['commonName'] ?? NULL;
+    $this->latinName = $args['latinName'] ?? NULL;
   }
 }
 
-// Create a new instance of the Bird class
-$robin = new Bird("American Robin", "Turdus migratorius");
-$towhee = new Bird("Eastern Towhee", "Pipilo erythrophthalmus");
+// Create new instances of the Bird class
+$flycatcher = new Bird(['commonName' => 'Acadian Flycatcher', 'latinName' => 'Empidonax virescens']);
+$robin = new Bird(['commonName' => 'American Robin', 'latinName' => 'Turdus migratorius']);
+$towhee = new Bird(['commonName' => 'Eastern Towhee', 'latinName' => 'Pipilo erythrophthalmus']);
+$wren = new Bird(['commonName' => 'Carolina Wren', 'latinName' => 'Thryothorus ludovicianus']);
 
 //Output
-echo "Common Name: " . $robin->commonName . "<br>";
-echo "Latin Name: " . $robin->latinName . "<hr>";
+echo "Common Name: " . $flycatcher->commonName . "<br>";
+echo "Latin Name: " . $flycatcher->latinName . "<hr>";
 
-echo "Common Name: " . $towhee->commonName . "<br>";
-echo "Latin Name: " . $towhee->latinName . "<br>";
+echo "Common Name: " . $wren->commonName . "<br>";
+echo "Latin Name: " . $wren->latinName . "<br>";
 
 ?>
