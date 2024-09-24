@@ -6,6 +6,7 @@ class ParseCSV {
    Add a public static property named $delimiter.
    Hint: check the delimiter in the wnc-birds.csv file.
   */
+  public static $delimiter = '|';
   
 
   private $filename;
