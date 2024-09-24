@@ -1,6 +1,10 @@
 <?php
 
 class Bird {
+/*
+Use the wnc-birds.csv file to create the properties
+Make all of the properties public.
+*/
   // Add properties based on CSV columns
   public $commonName;
   public $habitat;
@@ -9,14 +13,6 @@ class Bird {
   public $behavior;
   public $conservationId;
   public $backyardTips;
-
-
-/*
-Use the wnc-birds.csv file to create the properties
-Make all of the properties public.
-*/
-
-
  
   /*
   Create a protected constant array called CONSERVATION_OPTIONS using the following scale.
@@ -27,6 +23,13 @@ Make all of the properties public.
   3 = Extreme concern
   4 = Extinct
   */
+  //Add the CONSERVATION_OPTIONS constant array
+  protected const CONSERVATION_OPTIONS = [
+    1 => 'Low concern',
+    2 => 'Moderate concern',
+    3 => 'Extreme concern',
+    4 => 'Extinct'
+  ];
 
  
 
