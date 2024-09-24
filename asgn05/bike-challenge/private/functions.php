@@ -1,18 +1,19 @@
 <?php
 
-function url_for($script_path) {
+function urlFor($scriptPath) {
   // add the leading '/' if not present
-  if($script_path[0] != '/') {
-    $script_path = "/" . $script_path;
+  if($scriptPath[0] != '/') {
+    $scriptPath = "/" . $scriptPath;
   }
-  return WWW_ROOT . $script_path;
+
+  return WWW_ROOT . $scriptPath;
 }
 
 function u($string="") {
   return urlencode($string);
 }
 
-function raw_u($string="") {
+function rawU($string="") {
   return rawurlencode($string);
 }
 
@@ -20,26 +21,26 @@ function h($string="") {
   return htmlspecialchars($string);
 }
 
-function error_404() {
+function error404() {
   header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
   exit();
 }
 
-function error_500() {
+function error500() {
   header($_SERVER["SERVER_PROTOCOL"] . " 500 Internal Server Error");
   exit();
 }
 
-function redirect_to($location) {
+function redirectTo($location) {
   header("Location: " . $location);
   exit;
 }
 
-function is_post_request() {
+function isPostRequest() {
   return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
 
-function is_get_request() {
+function isGetRequest() {
   return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
 
