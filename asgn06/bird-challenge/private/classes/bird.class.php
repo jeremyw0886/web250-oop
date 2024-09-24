@@ -31,13 +31,21 @@ Make all of the properties public.
     4 => 'Extinct'
   ];
 
- 
-
  /*
    - Create a public __contruct that accepts a list of $args[]
    - Use the Null coalescing operator
    - Create a default value of 1 for conservation_id
  */
+  // Creates constructor to use the args array
+  public function __construct($args = []) {
+    $this->commonName = $args['commonName'] ?? '';
+    $this->habitat = $args['habitat'] ?? '';
+    $this->food = $args['food'] ?? '';
+    $this->nestPlacement = $args['nestPlacement'] ?? '';
+    $this->behavior = $args['behavior'] ?? '';
+    $this->conservationId = $args['conservationId'] ?? 1;
+    $this->backyardTips = $args['backyardTips'] ?? '';
+  }
 
 
 
