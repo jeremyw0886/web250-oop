@@ -22,11 +22,11 @@
 
 
   // Autoload class definitions
-  function my_autoload($class) {
+  function myAutoload($class) {
     if(preg_match('/\A\w+\Z/', $class)) {
       include('classes/' . $class . '.class.php');
     }
   }
-  spl_autoload_register('my_autoload');
+  spl_autoload_register('myAutoload');
 
 ?>
