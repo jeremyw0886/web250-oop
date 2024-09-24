@@ -1,6 +1,15 @@
 <?php
 
 class Bird {
+  // Add properties based on CSV columns
+  public $commonName;
+  public $habitat;
+  public $food;
+  public $nestPlacement;
+  public $behavior;
+  public $conservationId;
+  public $backyardTips;
+
 
 /*
 Use the wnc-birds.csv file to create the properties
