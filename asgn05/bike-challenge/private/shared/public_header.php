@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>Chain Gang <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
+    <title>Bike Challenge <?php if(isset($page_title)) { echo '- ' . h($page_title); } ?></title>
     <meta charset="utf-8">
     <link rel="stylesheet" media="all" href="<?php echo urlFor('/stylesheets/public.css'); ?>" />
   </head>
