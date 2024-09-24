@@ -31,11 +31,11 @@ Make all of the properties public.
     4 => 'Extinct'
   ];
 
- /*
+   /*
    - Create a public __contruct that accepts a list of $args[]
    - Use the Null coalescing operator
    - Create a default value of 1 for conservation_id
- */
+   */
   // Creates constructor to use the args array
   public function __construct($args = []) {
     $this->commonName = $args['commonName'] ?? '';
@@ -47,16 +47,18 @@ Make all of the properties public.
     $this->backyardTips = $args['backyardTips'] ?? '';
   }
 
-
-
-/*
+  /*
   Create a public method called conservation(). This method should mimic the
     public function condition() from the bicycle.class.php file
-
-
-*/
-
-
+  */
+  // Add the conservation method
+  public function conservation() {
+    if($this->conservationId > 0) {
+      return self::CONSERVATION_OPTIONS[$this->conservationId];
+    } else {
+        return 'Unknown';
+    }
+  }
 }
 
 ?>
