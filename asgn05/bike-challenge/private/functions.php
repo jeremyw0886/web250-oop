@@ -5,7 +5,6 @@ function urlFor($scriptPath) {
   if($scriptPath[0] != '/') {
     $scriptPath = "/" . $scriptPath;
   }
-
   return WWW_ROOT . $scriptPath;
 }
 
