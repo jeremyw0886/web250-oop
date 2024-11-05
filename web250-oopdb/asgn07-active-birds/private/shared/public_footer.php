@@ -1,7 +1,10 @@
     <footer>
-      <?php include(SHARED_PATH . '/public_copyright_disclaimer.php'); ?>
+      <p>&copy; <?php echo date('Y'); ?> WNC Birds</p>
     </footer>
 
-    </body>
+  </body>
+</html>
 
-    </html>
+<?php
+  db_disconnect($database);
+?>
