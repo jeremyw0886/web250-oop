@@ -1,4 +1,5 @@
 <?php
+// Keep database credentials in a separate file
 
 // local development
 define("DB_SERVER", "localhost");
