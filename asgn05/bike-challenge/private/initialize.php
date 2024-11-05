@@ -27,7 +27,8 @@
   // Load class definitions manually
 
   // -> Individually
-  // require_once('classes/bicycle.class.php');
+  require_once('classes/bicycle.class.php');
+  require_once('classes/parsecsv.class.php');
 
   // -> All classes in directory
   foreach(glob('classes/*.class.php') as $file) {
@@ -35,11 +36,16 @@
   }
 
   // Autoload class definitions
-  function myAutoLoad($class) {
-    if(preg_match('/\A\w+\Z/', $class)) {
-      include('classes/' . $class . '.class.php');
-    }
-  }
-  spl_autoload_register('myAutoLoad');
+  // function myAutoLoad($class) {
+  //   if(preg_match('/\A\w+\Z/', $class)) {
+  //     $file = PRIVATE_PATH . '/classes/' . strtolower($class) . '.class.php';
+  //     if (file_exists($file)) {
+  //       include($file);
+  //     } else {
+  //       error_log("Class file not found: " . $file);
+  //     }
+  //   }
+  // }
+  // spl_autoload_register('myAutoLoad');
 
 ?>

@@ -19,14 +19,16 @@
     You can list the required classes manually or use the autoload class.
     I have purposely left the autoload class because the code is difficult.
   */
+  require_once('classes/bird.class.php');
+  require_once('classes/parsecsv.class.php');
 
 
   // Autoload class definitions
-  function myAutoload($class) {
-    if(preg_match('/\A\w+\Z/', $class)) {
-      include('classes/' . $class . '.class.php');
-    }
-  }
-  spl_autoload_register('myAutoload');
+  // function myAutoload($class) {
+  //   if(preg_match('/\A\w+\Z/', $class)) {
+  //     include('classes/' . $class . '.class.php');
+  //   }
+  // }
+  // spl_autoload_register('myAutoload');
 
 ?>
