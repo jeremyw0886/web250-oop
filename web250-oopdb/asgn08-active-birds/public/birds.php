@@ -48,4 +48,4 @@ $birds = Bird::find_all();
   </div>
 </div>
 
-<?php include(SHARED_PATH . '/public_footer.php'); ?>
+<?php include(SHARED_PATH . '/public_footer.php'); ?> 
