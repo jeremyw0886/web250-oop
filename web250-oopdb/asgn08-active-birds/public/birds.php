@@ -27,7 +27,6 @@ $birds = Bird::find_all();
         <th>Backyard Tips</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
-        <th>&nbsp;</th>
       </tr>
 
       <?php foreach($birds as $bird) { ?>
@@ -41,7 +40,6 @@ $birds = Bird::find_all();
           <td><?php echo h($bird->backyard_tips); ?></td>
           <td><a href="<?php echo url_for('/active-record/show.php?id=' . h(u($bird->id))); ?>">View</a></td>
           <td><a href="<?php echo url_for('/active-record/edit.php?id=' . h(u($bird->id))); ?>">Edit</a></td>
-          <td><a href="<?php echo url_for('/active-record/delete.php?id=' . h(u($bird->id))); ?>">Delete</a></td>
         </tr>
       <?php } ?>
     </table>
