@@ -12,7 +12,7 @@
 
     <header>
       <h1>
-        <a href="<?php echo url_for('/index.php'); ?>">
+        <a href="<?php echo url_for('/active-record/index.php'); ?>">
           WNC Birds
         </a>
       </h1>
