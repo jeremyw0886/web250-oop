@@ -55,6 +55,14 @@ header a:hover {
     padding: 2rem;
 }
 
+#content {
+  padding: 2rem;
+}
+
+.actions a:last-of-type {
+  padding-left: 1rem;
+}
+
 /* Introduction Section */
 .intro {
     margin-bottom: 2rem;
@@ -175,7 +183,7 @@ footer p {
 
 /* Links */
 a {
-    color: #2c3e50;
+    color: #8989ff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
