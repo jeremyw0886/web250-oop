@@ -59,6 +59,11 @@ header a:hover {
   padding: 2rem;
 }
 
+#landing-content {
+    padding: 2rem;
+    text-align: center;
+}
+
 .actions a:last-of-type {
   padding-left: 1rem;
 }
@@ -191,6 +196,21 @@ a {
 a:hover {
     color: #34495e;
     text-decoration: underline;
+}
+
+#landing-content a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+#landing-content a:hover {
+    color: #34495e;
+    text-decoration: underline;
+}
+
+#landing-content ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 /* Utility Classes */

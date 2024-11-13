@@ -39,7 +39,8 @@ include(SHARED_PATH . '/public_header.php');
       </dl>
       <dl>
         <dt>Conservation Status</dt>
-        <dd><?php echo h($bird->conservation()); ?></dd>
+        <dd class="status-<?php echo strtolower(str_replace(' ', '-', $bird->conservation())); ?>">
+                    <?php echo h($bird->conservation()); ?>
       </dl>
       <dl>
         <dt>Backyard Tips</dt>
