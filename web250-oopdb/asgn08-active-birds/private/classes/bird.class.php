@@ -10,10 +10,11 @@ class Bird extends DatabaseObject
   public $common_name;
   public $habitat;
   public $food;
+  public $behavior;
   public $conservation_id;
   public $backyard_tips;
 
-  protected const CONSERVATION_OPTIONS = [
+  const CONSERVATION_OPTIONS = [
     1 => 'Low concern',
     2 => 'Moderate concern',
     3 => 'Extreme concern',

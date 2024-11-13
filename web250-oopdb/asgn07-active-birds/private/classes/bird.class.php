@@ -46,7 +46,8 @@ class Bird {
     } else {
         return false;
     }
-}
+    
+  }
   // ----- END OF ACTIVE RECORD CODE ------
 
   public $id;
