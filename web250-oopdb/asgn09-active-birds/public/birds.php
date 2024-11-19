@@ -2,6 +2,9 @@
 require_once '../private/initialize.php';
 $page_title = 'Bird List';
 include SHARED_PATH . '/public_header.php';
+require_once '../private/debugger.php';
+
+debug_test();
 
 $birds = Bird::find_all();
 ?>

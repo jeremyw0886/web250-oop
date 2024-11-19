@@ -24,3 +24,16 @@ if (!function_exists('debug_to_file')) {
         file_put_contents($filename, $output, FILE_APPEND);
     }
 }
+
+if (!function_exists('debug_test')) {
+    function debug_test() {
+        $timestamp = date('Y-m-d H:i:s');
+        $test_message = "[$timestamp] Debugging test successful: All systems operational.";
+        
+        debug($test_message);
+        debug_to_console($test_message);
+        debug_to_file($test_message);
+    }
+}
+
+?>
