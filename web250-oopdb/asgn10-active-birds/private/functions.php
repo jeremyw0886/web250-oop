@@ -1,5 +1,4 @@
 <?php
-
 function url_for($script_path) {
   // add the leading '/' if not present
   if($script_path[0] != '/') {
@@ -43,17 +42,25 @@ function is_get_request() {
   return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
 
-// PHP on Windows does not have a money_format() function.
-// This is a super-simple replacement.
-if(!function_exists('money_format')) {
-  function money_format($format, $number) {
-    return '$' . number_format($number, 2);
+function display_errors($errors=array()) {
+  $output = '';
+  if(!empty($errors)) {
+    $output .= "<div class=\"error\">";
+    $output .= "Please fix the following errors:";
+    $output .= "<ul>";
+    foreach($errors as $error) {
+      $output .= "<li>" . h($error) . "</li>";
+    }
+    $output .= "</ul>";
+    $output .= "</div>";
   }
+  return $output;
 }
 
-function display_field_error($errors, $field) {
-    if(isset($errors[$field])) {
-        return '<span class="error">' . h($errors[$field]) . '</span>';
-    }
-    return '';
+function display_session_message() {
+  global $session;
+  $msg = $session->message();
+  if(isset($msg) && $msg != '') {
+    return '<div class="message success">' . h($msg) . '</div>';
+  }
 }
