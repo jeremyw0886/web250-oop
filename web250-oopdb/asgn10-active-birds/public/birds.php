@@ -1,53 +1,31 @@
-<?php 
-require_once '../private/initialize.php';
-$page_title = 'Bird List';
-include SHARED_PATH . '/public_header.php';
-require_once '../private/debugger.php';
+<?php require_once('../private/initialize.php'); ?>
 
-debug_test();
-
-$birds = Bird::find_all();
-?>
+<?php $page_title = 'Bird Inventory'; ?>
+<?php include(SHARED_PATH . '/public_header.php'); ?>
 
 <div id="main">
   <div id="page">
-    <div class="intro">
-      <h2>Bird Inventory</h2>
-      <p>This is a short list -- start your birding!</p>
+    <div id="content">
+      <div class="intro">
+        <h1>Bird Inventory</h1>
+        <p>Welcome to the WNC Birds inventory page. Here you can browse our complete collection of documented birds.</p>
+      </div>
+
+      <div class="actions">
+        <a href="<?php echo url_for('/birds/index.php'); ?>" class="view-btn">View Full Catalog</a>
+      </div>
+
+      <div class="content-section">
+        <h2>Conservation Status Categories</h2>
+        <ul>
+          <li><span class="status-low-concern">Low Concern</span> - Population is stable</li>
+          <li><span class="status-moderate-concern">Moderate Concern</span> - Population shows some decline</li>
+          <li><span class="status-extreme-concern">Extreme Concern</span> - Population is severely declining</li>
+          <li><span class="status-extinct">Extinct</span> - No longer found in the wild</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="actions">
-      <a class="action" href="<?php echo url_for('/active-record/new.php'); ?>">Add Bird</a>
-    </div>
-
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Habitat</th>
-        <th>Food</th>
-        <th>Conservation</th>
-        <th>Backyard Tips</th>
-        <th>&nbsp;</th>
-        <th>&nbsp;</th>
-        <th>&nbsp;</th>
-      </tr>
-
-      <?php foreach($birds as $bird) { ?>
-        <tr>
-          <td><?php echo h($bird->common_name); ?></td>
-          <td><?php echo h($bird->habitat); ?></td>
-          <td><?php echo h($bird->food); ?></td>
-          <td class="status-<?php echo strtolower(str_replace(' ', '-', $bird->conservation())); ?>">
-            <?php echo h($bird->conservation()); ?>
-          </td>
-          <td><?php echo h($bird->backyard_tips); ?></td>
-          <td><a href="<?php echo url_for('/active-record/show.php?id=' . h(u($bird->id))); ?>">View</a></td>
-          <td><a href="<?php echo url_for('/active-record/edit.php?id=' . h(u($bird->id))); ?>">Edit</a></td>
-          <td><a href="<?php echo url_for('/active-record/delete.php?id=' . h(u($bird->id))); ?>">Delete</a></td>
-        </tr>
-      <?php } ?>
-    </table>
   </div>
 </div>
 
-<?php include SHARED_PATH . '/public_footer.php'; ?> 
+<?php include(SHARED_PATH . '/public_footer.php'); ?>
