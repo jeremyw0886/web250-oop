@@ -1,5 +1,5 @@
 <?php
-ob_start();
+ob_start(); // turn on output buffering
 
 // Assign file paths to PHP constants
 define("PRIVATE_PATH", dirname(__FILE__));
@@ -31,6 +31,6 @@ $session = new Session;
 function require_login() {
     global $session;
     if(!$session->is_logged_in()) {
-        redirect_to(url_for('/members/login.php'));
+        redirect_to(url_for('/login.php'));
     }
 }

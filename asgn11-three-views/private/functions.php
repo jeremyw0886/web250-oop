@@ -1,66 +1,67 @@
 <?php
 function url_for($script_path) {
-  // add the leading '/' if not present
-  if($script_path[0] != '/') {
-    $script_path = "/" . $script_path;
-  }
-  return WWW_ROOT . $script_path;
+    // add the leading '/' if not present
+    if($script_path[0] != '/') {
+        $script_path = "/" . $script_path;
+    }
+    return WWW_ROOT . $script_path;
 }
 
 function u($string="") {
-  return urlencode($string);
+    return urlencode($string);
 }
 
 function raw_u($string="") {
-  return rawurlencode($string);
+    return rawurlencode($string);
 }
 
 function h($string="") {
-  return htmlspecialchars($string);
+    return htmlspecialchars($string);
 }
 
 function error_404() {
-  header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
-  exit();
+    header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+    exit();
 }
 
 function error_500() {
-  header($_SERVER["SERVER_PROTOCOL"] . " 500 Internal Server Error");
-  exit();
+    header($_SERVER["SERVER_PROTOCOL"] . " 500 Internal Server Error");
+    exit();
 }
 
 function redirect_to($location) {
-  header("Location: " . $location);
-  exit;
+    header("Location: " . $location);
+    exit;
 }
 
 function is_post_request() {
-  return $_SERVER['REQUEST_METHOD'] == 'POST';
+    return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
 
 function is_get_request() {
-  return $_SERVER['REQUEST_METHOD'] == 'GET';
+    return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
 
 function display_errors($errors=array()) {
-  $output = '';
-  if(!empty($errors)) {
-    $output .= "<div class=\"error\">";
-    $output .= "Please fix the following errors:";
-    $output .= "<ul>";
-    foreach($errors as $error) {
-      $output .= "<li>" . h($error) . "</li>";
+    $output = '';
+    if (!empty($errors)) {
+        $output .= "<div class=\"errors\">";
+        $output .= "Please fix the following errors:";
+        $output .= "<ul>";
+        foreach ($errors as $error) {
+            $output .= "<li>" . h($error) . "</li>";
+        }
+        $output .= "</ul>";
+        $output .= "</div>";
     }
-    $output .= "</ul>";
-    $output .= "</div>";
-  }
-  return $output;
+    return $output;
 }
 
 function display_session_message() {
-  global $session;
-  $msg = $session->message();
-  if(isset($msg) && $msg != '') {
-    return '<div class="message success">' . h($msg) . '</div>';
-  }
+    global $session;
+    $msg = $session->message();
+    if(isset($msg) && $msg != '') {
+        $session->clear_message();
+        return '<div class="message">' . h($msg) . '</div>';
+    }
 }
