@@ -13,9 +13,9 @@
       </div>
 
       <div class="actions">
-        <a href="<?php echo url_for('/birds/index.php'); ?>" class="view-btn">View Bird Catalog</a>
+        <a href="<?php echo url_for('/birds/index.php'); ?>" class="home-view-btn">View Bird Catalog</a>
         <?php if($session->is_logged_in()) { ?>
-          <a href="<?php echo url_for('/birds/new.php'); ?>" class="edit-btn">Add New Bird</a>
+          <a href="<?php echo url_for('/birds/new.php'); ?>" class="home-edit-btn">Add New Bird</a>
         <?php } ?>
       </div>
     </div>
