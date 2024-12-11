@@ -1,5 +1,5 @@
-<?php 
-require_once('../../private/initialize.php'); 
+<?php
+require_once('../../private/initialize.php');
 
 /** @var Bird[] $birds */
 $birds = Bird::find_all();
@@ -14,7 +14,7 @@ $birds = Bird::find_all();
       <div class="birds listing">
         <h1>Birds</h1>
 
-        <?php if($session->is_logged_in()) { ?>
+        <?php if ($session->is_logged_in()) { ?>
           <div class="actions">
             <a class="action" href="<?php echo url_for('/birds/new.php'); ?>">Add Bird</a>
           </div>
@@ -30,7 +30,8 @@ $birds = Bird::find_all();
             <th>&nbsp;</th>
           </tr>
 
-          <?php foreach($birds as $bird) { /** @var Bird $bird */ ?>
+          <?php foreach ($birds as $bird) {
+            /** @var Bird $bird */ ?>
             <tr>
               <td><?php echo h($bird->common_name); ?></td>
               <td><?php echo h($bird->habitat); ?></td>
@@ -41,7 +42,7 @@ $birds = Bird::find_all();
               <td><?php echo h($bird->backyard_tips); ?></td>
               <td class="actions">
                 <a class="action view-btn" href="<?php echo url_for('/birds/show.php?id=' . h(u($bird->id))); ?>">View</a>
-                <?php if($session->is_logged_in()) { ?>
+                <?php if ($session->is_logged_in()) { ?>
                   <a class="action edit-btn" href="<?php echo url_for('/birds/edit.php?id=' . h(u($bird->id))); ?>">Edit</a>
                   <a class="action delete-btn" href="<?php echo url_for('/birds/delete.php?id=' . h(u($bird->id))); ?>">Delete</a>
                 <?php } ?>
